@@ -84,13 +84,13 @@ Example: `playerApi.unwatchBodyHeight()`
 
 #### `setAttribute`
 
-Persist a single attribute in the gadget configuration. This can only be called while authoring.
+Persist a single attribute in the gadget configuration. This function can only be called while authoring.
 
 Example: `playerApi.setAttribute('myColor', '#202020')`
 
 #### `setAttributes`
 
-Persist a object containing the changed attributes in the gadget configuration. Only the changed attributes need to be specified (not the entire gadget configuration). This can only be called while authoring.
+Persist an object containing the changed attributes in the gadget configuration. Each key/value pair at the top level of the object will be persisted. Existing persisted keys will remain untouched so only the changed attributes need to be specified (not the entire gadget configuration). This function can only be called while authoring.
 
 Example: `playerApi.setAttributes({ myColor: '#202020', myFont: 'Courier' })`
 
@@ -102,7 +102,7 @@ Example: `playerApi.setLearnerAttribute('openedGadget', true)`
 
 #### `setLearnerAttributes`
 
-Persist an object containing the gadget's current learner state. Only the changed attributes need to be specified (not the entire learner state).
+Persist an object containing the gadget's current learner state. Each key/value pair at the top level of the object will be persisted. Existing persisted keys will remain untouched so only the the changed attributes need to be specified (not the entire learner state).
 
 Example: `playerApi.setLearnerAttributes({ lastOpened: 12, lastSelected: true })`
 
