@@ -84,13 +84,13 @@ Example: `playerApi.unwatchBodyHeight()`
 
 #### `setAttribute`
 
-Persist a single attribute in the gadget configuration.
+Persist a single attribute in the gadget configuration. This can only be called while authoring.
 
 Example: `playerApi.setAttribute('myColor', '#202020')`
 
 #### `setAttributes`
 
-Persist a object containing the changed attributes in the gadget configuration. Only the changed attributes need to be specified (not the entire gadget configuration).
+Persist a object containing the changed attributes in the gadget configuration. Only the changed attributes need to be specified (not the entire gadget configuration). This can only be called while authoring.
 
 Example: `playerApi.setAttributes({ myColor: '#202020', myFont: 'Courier' })`
 
