@@ -73,7 +73,9 @@ window.VersalChallengesAPI.prototype._scoreChallenge = function(challenge, respo
 
 window.VersalChallengesAPI.prototype._scoringStrategies = {
   strict: function(prompt, response) {
-    return _.isEqual(prompt, response) ? 1 : 0;
+    // Coerce strings to guard against false negatives:
+    // _.isEqual('2', 2) returns false
+    return _.isEqual('' + prompt, '' + response) ? 1 : 0;
   },
 
   partial: function(prompt, response) {
