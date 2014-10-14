@@ -512,6 +512,15 @@ Suppose you already created some courses that use your gadget version `0.1.3`, a
 
 Go to the course you created where your gadget has been used. Click on the "Sandbox" tray and you will see that your gadget's icon has a band on it, indicating that an upgrade is available. Click on the band and confirm the upgrade to a new version.
 
+## Requesting approval
+
+When your gadget is ready you can request approval by emailing support@versal.com. Please include the following info:
+
+* URL to the course
+* Name of the gadget
+* Version of the gadget
+* Any restriction. E.g. Only allow authors in a specific org(s) use the gadget in courses.
+
 ## External links
 
 * [Installation help](https://github.com/Versal/sdk/blob/master/README.md#installation-in-depth)
