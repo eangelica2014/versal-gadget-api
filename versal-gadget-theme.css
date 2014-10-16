@@ -27,11 +27,6 @@ button:hover {
   background-color: #524e47;
 }
 
-button.disabled, button.disabled:hover {
-  cursor: default;
-  background-color: rgba(124,121,117, 0.5);
-}
-
 button[disabled], button[disabled]:hover {
   cursor: default;
   background-color: rgba(124,121,117, 0.5);
