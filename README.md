@@ -94,17 +94,11 @@ Persist an object containing the changed attributes in the gadget configuration.
 
 Example: `playerApi.setAttributes({ myColor: '#202020', myFont: 'Courier' })`
 
-#### `setLearnerAttribute`
-
-Persist a single attribute in the gadget's learner state.
-
-Example: `playerApi.setLearnerAttribute('openedGadget', true)`
-
-#### `setLearnerAttributes`
+#### `setLearnerState`
 
 Persist an object containing the gadget's current learner state. Each key/value pair at the top level of the object will be persisted. Existing persisted keys will remain untouched so only the the changed attributes need to be specified (not the entire learner state).
 
-Example: `playerApi.setLearnerAttributes({ lastOpened: 12, lastSelected: true })`
+Example: `playerApi.setLearnerState({ lastOpened: 12, lastSelected: true })`
 
 #### `setPropertySheetAttributes`
 

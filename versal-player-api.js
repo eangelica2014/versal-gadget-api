@@ -116,17 +116,26 @@ PlayerAPI.prototype.setAttributes = function(attrs) {
   this.sendMessage('setAttributes', attrs);
 };
 
+/*
+ * Deprecation Notice
+ * We discourage the use of setLearnerAttribute and setLearnerAttributes
+ * in favor of setLearnerState
+*/
 PlayerAPI.prototype.setLearnerAttribute = function(name, value){
   var attr = {};
   attr[name] = value;
   this.setLearnerState(attr);
 };
 
+/*
+ * Deprecation Notice
+ * We discourage the use of setLearnerAttribute and setLearnerAttributes
+ * in favor of setLearnerState
+*/
 PlayerAPI.prototype.setLearnerAttributes = function(attrs) {
   this.sendMessage('setLearnerState', attrs);
 };
 
-// Deprecated
 PlayerAPI.prototype.setLearnerState = function(attrs) {
   this.sendMessage('setLearnerState', attrs);
 };
