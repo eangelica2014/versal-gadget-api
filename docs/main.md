@@ -124,7 +124,10 @@ greeting.addEventListener('change', function(e){
 });
 
 learnerName.addEventListener('change', function(e){
-  player.setLearnerState({learnerName.name, learnerName.value});
+  var attrs = {};
+  attrs[learnerName.name] = learnerName.value;
+
+  player.setLearnerState(attrs);
 });
 
 player.on('attributesChanged', function(data){
