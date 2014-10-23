@@ -229,7 +229,7 @@ Supported message names are `attributesChanged`, `learnerStateChanged`, and `edi
 
 #### `attributesChanged`
 
-This message indicates to the gadget that some attributes have changed their values. This message is also sent to the gadget at initialization time, that is, shortly after the gadget sends `startListening` to the player.
+This message indicates to the gadget that some attributes have changed their values. This message is also sent to the gadget at initialization time, that is, shortly after the gadget sends `startListening` to the player. After initialization the event is fired again with the current gadget state after each call to `setAttributes` and whenever the author changes an attribute via a property sheet.
 
 Example: `playerApi.on('attributesChanged', function(attrs){...})`
 
@@ -237,7 +237,7 @@ The callback receives an object containing the new attributes for the gadget. Th
 
 #### `learnerStateChanged`
 
-This message indicates to the gadget that some learner's state has changed. This message is also sent to the gadget at initialization time, that is, shortly after the gadget sends `startListening` to the player.
+This message indicates to the gadget that some learner's state has changed. This message is also sent to the gadget at initialization time, that is, shortly after the gadget sends `startListening` to the player. After initialization the event is fired again with the current learner state after each call to `setLearnerState`.
 
 Example: `playerApi.on('learnerStateChanged', function(learnerState){...})`
 
