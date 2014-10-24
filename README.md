@@ -66,7 +66,7 @@ Example: `playerApi.setHeight(420)`
 
 #### `setHeightToBodyHeight`
 
-Assign height to the gadget's container according to the current height of the gadget's `body` element.
+Assign height to the gadget's container according to the current height of the gadget's `body` element. It uses `document.body.offsetHeight`: ["For the document body object, the measurement includes total linear content height [..] Floated elements extending below other linear content are ignored."](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement.offsetHeight)
 
 Example: `playerApi.setHeightToBodyHeight()`
 
