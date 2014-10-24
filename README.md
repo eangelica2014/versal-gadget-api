@@ -21,6 +21,14 @@ Then add the following to the `<head>` of your your gadget's `versal.html`:
   <link rel="import" href="bower_components/versal-gadget-api/versal-gadget-api.html">
 ```
 
+Then instantiate the player API object:
+
+```
+  window.addEventListener('HTMLImportsLoaded', function(){
+    var playerApi = new VersalPlayerAPI()
+  };
+```
+
 ### Vanilla JS/CSS
 
 You can also install the different APIs in this repo manually. This is recommended if you're not planning on using Web Components, or want to keep the gadget's footprint as small as possible. See the documentation for the different APIs below for installation instructions.

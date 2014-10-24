@@ -287,7 +287,13 @@ If you are not using Web components, include these files:
 
 When your gadget code is loaded, create a new `player-api` object:
 
-    var playerApi = new VersalPlayerAPI();
+    window.addEventListener('HTMLImportsLoaded', function(){
+      var playerApi = new VersalPlayerAPI()
+    };
+
+If you are not using Web components:
+
+    var playerApi = new VersalPlayerAPI()
 
 To receive messages from the player, add a listener to the player object, for example like this:
 
