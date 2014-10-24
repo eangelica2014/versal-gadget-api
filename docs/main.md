@@ -245,14 +245,7 @@ The layout of `versal.json` is clear from this example (see [versal.json](https:
   "title": "Hello, World",
   "description": "Demo gadget showing the basic API",
   "author": "versal",   // username on Versal.com
-  "launcher": "iframe",  // specifies the gadget launcher, must be "iframe" for now
-  "defaultConfig": {  // default set of attributes for the gadget
-    "chosenColor" : "#00cc00",
-    "chosenWord" : "green"
-  },
-  "defaultUserState": { // default learner state for the gadget
-    "isBold": false
-  }
+  "launcher": "iframe"  // specifies the gadget launcher, must be "iframe" for now
 }
 ```
 
