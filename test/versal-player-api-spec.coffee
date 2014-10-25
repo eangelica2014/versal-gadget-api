@@ -1,5 +1,11 @@
 assert = chai.assert
 
+simulateLauncherEvent = (name, data) ->
+  window.postMessage
+    event: name
+    data: data
+  , '*'
+
 describe 'supported commands', ->
   papi = null
   postMessage = null
@@ -182,3 +188,41 @@ describe 'supported commands', ->
         window.removeEventListener 'message', setHeightHandler
         done()
       setTimeout finish, 100
+
+  describe 'default state', ->
+
+    describe 'setDefaultAttributes', ->
+
+      it 'should override unset keys', (done) ->
+        papi.once 'attributesChanged', (attrs) ->
+          assert.equal attrs.fooDefault, 'bar'
+          done()
+
+        papi.setDefaultAttributes fooDefault: 'bar'
+        simulateLauncherEvent 'attributesChanged', {}
+
+      it 'should not override set keys', (done) ->
+        papi.once 'attributesChanged', (attrs) ->
+          assert.equal attrs.fooDefault, 'baz'
+          done()
+
+        papi.setDefaultAttributes fooDefault: 'bar'
+        simulateLauncherEvent 'attributesChanged', fooDefault: 'baz'
+
+    describe 'setDefaultLearnerState', ->
+
+      it 'setDefaultLearnerState values should override unset keys', (done) ->
+        papi.once 'learnerStateChanged', (attrs) ->
+          assert.equal attrs.fooDefault, 'moof'
+          done()
+
+        papi.setDefaultLearnerState fooDefault: 'moof'
+        simulateLauncherEvent 'learnerStateChanged', {}
+
+      it 'setDefaultLearnerState values should not override set keys', (done) ->
+        papi.once 'learnerStateChanged', (attrs) ->
+          assert.equal attrs.fooDefault, 'foof'
+          done()
+
+        papi.setDefaultLearnerState fooDefault: 'zoof'
+        simulateLauncherEvent 'learnerStateChanged', fooDefault: 'foof'

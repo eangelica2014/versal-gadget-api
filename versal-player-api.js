@@ -1,5 +1,17 @@
 (function(){
 
+// helpers
+
+applyDefaults = function(obj, defaults) {
+  if (!defaults) return obj;
+  Object.keys(defaults).forEach(function(key){
+    if (!obj[key]) {
+      obj[key] = defaults[key];
+    }
+  }.bind(this));
+  return obj;
+};
+
 //  This Player thing should be used inside gadget
 //  as a convenience API over postMessage.
 //
@@ -44,6 +56,14 @@ PlayerAPI.prototype.handleMessage = function(evt) {
   var message = evt.data;
 
   if(message && message.event) {
+    // Ensure default configurations are applied
+    if(message.event == 'attributesChanged') {
+      message.data = applyDefaults(message.data, this._defaultAttributes)
+    }
+    if(message.event == 'learnerStateChanged') {
+      message.data = applyDefaults(message.data, this._defaultLearnerState)
+    }
+
     this.emit('message', message);
 
     // Inspect attributes for asset-related fields and extract asset json
@@ -78,6 +98,14 @@ PlayerAPI.prototype._triggerAssetCallbacks = function(attrs){
 
 PlayerAPI.prototype.startListening = function(){
   this.sendMessage('startListening');
+};
+
+PlayerAPI.prototype.setDefaultAttributes = function(attrs){
+  this._defaultAttributes = attrs;
+};
+
+PlayerAPI.prototype.setDefaultLearnerState = function(attrs){
+  this._defaultLearnerState = attrs;
 };
 
 PlayerAPI.prototype.setHeight = function(px) {
