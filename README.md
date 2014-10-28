@@ -161,7 +161,7 @@ Example of using `Tags`:
 
 Tell the player to show a placeholder that indicates an error.
 
-Example: `playerApi.error()`
+Example: `playerApi.error(new Error('Something bad happened to my gadget'))`
 
 #### `track`
 
