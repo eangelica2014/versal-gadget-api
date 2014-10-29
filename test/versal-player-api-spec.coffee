@@ -64,10 +64,11 @@ describe 'supported commands', ->
     assert postMessage.calledWith expectedMessage, '*'
 
   it 'error', ->
-    papi.error { foo: 'bar'}
+    papi.error new Error 'foo'
 
-    expectedMessage = { event: 'error', data: { foo: 'bar'} }
-    assert postMessage.calledWith expectedMessage, '*'
+    message = postMessage.firstCall.args[0]
+    assert.equal message.event, 'error'
+    assert.equal message.data.message, 'foo'
 
   it 'requestAsset', ->
     papi.requestAsset { type: 'image' }
