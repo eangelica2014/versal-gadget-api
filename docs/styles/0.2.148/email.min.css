@@ -1,0 +1,31 @@
+/*
+ * @ f05165bc809892bf68147878f9bab36dafe6ba91
+ */
+
+body{color:#524e47;font-family:Avenir Next,Verdana,Geneva,'DejaVu Sans',sans-serif;font-size:10pt}
+hr{border:1px solid #d8dadc;border-width:1px 0 0;margin:20px 10px}
+h1,h2,h3,h4,h5,h6{font-weight:bold;margin:.6em 0 .4em;}
+h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{font-size:100%;font-weight:normal}
+h1{font-size:200%}
+h2 /* from versal-site/course.styl:.course-title */{font-size:24px;line-height:24px;font-weight:normal;font-family:Koufiya,Georgia,serif;color:#7c7975;border-bottom:1px solid #c7c3be;margin:0 0 13px;padding:0 0 10px}
+h2 a:link,h2 a:visited{color:#524e47}
+h3{font-size:120%}
+h4{border-top:1px solid #c7c3be;font-family:Koufiya,Georgia,serif;font-size:100%;padding-top:4px}
+h5{font-family:Koufiya,Georgia,serif;font-size:16px;line-height:21px}
+h6{font-size:80%;font-weight:normal}
+p,li,blockquote{font-family:Koufiya,Georgia,serif;font-size:16px;line-height:26px;margin-bottom:.8em}
+.altParagraph{font-size:14px}
+ul,ol{list-style:square;margin:1em 5% 1.5em 2em}
+li{margin-bottom:.3em}
+a:link,a:visited{color:#3a968a;text-decoration:none}
+a:hover,a:active,a:focus{text-decoration:underline}
+pre,blockquote{margin:2em}
+pre{white-space:pre-wrap}
+blockquote{border-left:1px solid #d8dadc;font-style:italic;padding-left:20px}
+code{border:1px solid #d8dadc;-webkit-border-radius:2px;border-radius:2px;background-color:#f3f4f4;display:inline-block;font-size:.9em;padding:0 3px}
+ul.inline,ol.inline{display:inline-block;list-style:none;margin:1em 0;}
+ul.inline li,ol.inline li{display:inline-block;padding:0 5px}
+.noborder{border:none}
+.shorterBorder{width:285px}
+body{border:1px solid #c7c3be;margin:20px}
+h3{color:#ce3e30}

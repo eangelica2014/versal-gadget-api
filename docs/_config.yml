@@ -1,0 +1,23 @@
+title: Versal for developers
+email: support@versal.com
+description: Resources for Versal gadget developers
+url: http://versal.github.com/versal-gadget-api
+defaults:
+  - scope:
+      path: docs
+      type: pages
+    values:
+      layout: docs
+  - scope:
+      path: wiki
+      type: pages
+    values:
+      layout: wiki
+markdown: redcarpet
+highlighter: pygments
+redcarpet:
+  extensions:
+  - fenced_code_blocks
+stylus:
+  compress: true
+  path: ./styles
