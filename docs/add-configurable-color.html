@@ -1,0 +1,249 @@
+<html>
+<head>
+
+<title>Add a configurable color | Versal for developers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=960">
+<meta name="keywords" content="versal, versal.com, Versal Group Inc.">
+<meta name="description" content="Versal Group, Inc.">
+<meta property="og:image" content="/assets/img/fb-og.png">
+<meta property="og:title" content="Versal">
+<meta property="og:description" content="One idea can launch a million more">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" href="/styles/0.2.148/main.min.css">
+<link rel="stylesheet" href="/styles/0.2.148/versal.site.min.css">
+<link rel="stylesheet" href="/styles/syntax.css">
+<link rel="stylesheet" href="/styles/docs.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="navbar navbar-fixed-top navbar-site">
+    <div class="navbar-inner">
+      <div class="navbar-inside">
+          <a href="/" class="brand">
+              <div class="logo-nav-svg">
+              </div>
+          </a>
+          <ul class="nav pull-right">
+              <li>
+                  <a href="/docs">docs</a>
+              </li>
+              <li>
+                  <a href="/support">support</a>
+              </li>
+              <li>
+                  <a href="/submit">submit</a>
+              </li>
+          </ul>
+      </div>
+    </div>
+</div>
+
+        <div class="container">
+    <div class="row-fluid">
+        <div class="span3">
+            <div class="homepage-activity">
+                <div class="nav-docs">
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Overview and concepts</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="/docs/introduction.html">Introduction</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/versal-platform.html">The Versal platform</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/courses-lessons-and-gadgets.html">Courses, lessons, and gadgets</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/authors-and-learners.html">Authors and learners</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/how-gadgets-work.html">How gadgets work</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Gadget tutorial</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="/docs/getting-started.html">Getting started</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/creating-new-gadget-project.html">Creating a new gadget project</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/testing-new-gadget.html">Testing the new gadget</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/preview-changes.html">Make and preview changes</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/how-this-gadget-works.html">How this gadget works</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/add-configurable-color.html" class="active">Add a configurable color</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/publish-gadget.html">Publish the gadget</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Reference</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="/docs/layout-of-gadget-project.html">The layout of a gadget project</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/gadget-lifecycle.html">The gadget lifecycle</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/deploying-gadget.html">Deploying a gadget</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/external-links.html">External links</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Example gadgets</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="https://github.com/Versal/hello-world-gadget">Hello world</a>
+            
+          </li>
+        
+          <li>
+            <a href="https://github.com/Versal/highlightr-iframe">Highlightr</a>
+            
+          </li>
+        
+          <li>
+            <a href="https://github.com/Versal/codepen-gadget">Codepen</a>
+            
+          </li>
+        
+          <li>
+            <a href="https://github.com/Versal/chess-gadget">Chess</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+</div>
+
+            </div>
+        </div>
+        <div class="span9">
+            <div class="marketing-column">
+                <div class="module">
+                    <h2>Add a configurable color</h2>
+                    <p>Let&#39;s add a new feature to the gadget, so that the author can set the background color. The color will be stored as a new attribute <code>bodyColor</code> in the gadget configuration.</p>
+
+<p>To let the gadget author edit the color, we use a <strong>property sheet</strong>. This is a feature of the player that is convenient for editing simple attributes.</p>
+
+<p>We need to make only two changes to the gadget code:</p>
+
+<ol>
+<li>Configure the property sheet</li>
+<li>Set the background color on <code>attributesChanged</code></li>
+</ol>
+
+<p>To configure the property sheet, we just need to add a call to the player API (anywhere after creating the <code>player</code> object):</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">player.setPropertySheetAttributes({
+     bodyColor:  { type: &#39;Color&#39;}
+});
+</code></pre></div>
+<p>To set the background color, we modify the <code>attributesChanged</code> handler like this:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">player.on(&#39;attributesChanged&#39;, function(data){
+  if(data.greeting) {
+    greeting.value = data.greeting;
+  }
+  if (data.bodyColor) {
+    document.querySelector(&#39;body&#39;).style.background = data.bodyColor;
+  }
+});
+</code></pre></div>
+<p>Now reload the browser window with the gadget. Click on the cogwheel icon to open the property sheet. You can now select a color:</p>
+
+<p><img src="images/my-gadget-3.png" alt="lesson with colored gadget" title="Lesson with colored gadget"></p>
+
+                    <div class="docs-prevnext">
+                      
+                        <a class="docs-prev" href="/docs/how-this-gadget-works.html">&larr;How this gadget works</a>
+                      
+                      
+                        <a class="docs-next pull-right" href="/docs/publish-gadget.html">Publish the gadget &rarr;</a>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="container-auto container-footer">
+        <div class="footer-quote"></div>
+    </div>
+    <div class="navbar navbar-footer">
+        <div class="navbar-inner">
+          <div class="navbar-inside">
+              <div class="brand">© 2014 Versal Group, Inc.</div>
+          </div>
+        </div>
+    </body>
+</html>

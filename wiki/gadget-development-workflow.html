@@ -1,0 +1,128 @@
+<html>
+<head>
+
+<title>Gadget development workflow | Versal for developers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=960">
+<meta name="keywords" content="versal, versal.com, Versal Group Inc.">
+<meta name="description" content="Versal Group, Inc.">
+<meta property="og:image" content="/assets/img/fb-og.png">
+<meta property="og:title" content="Versal">
+<meta property="og:description" content="One idea can launch a million more">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" href="/styles/0.2.148/main.min.css">
+<link rel="stylesheet" href="/styles/0.2.148/versal.site.min.css">
+<link rel="stylesheet" href="/styles/syntax.css">
+<link rel="stylesheet" href="/styles/docs.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="navbar navbar-fixed-top navbar-site">
+    <div class="navbar-inner">
+      <div class="navbar-inside">
+          <a href="/" class="brand">
+              <div class="logo-nav-svg">
+              </div>
+          </a>
+          <ul class="nav pull-right">
+              <li>
+                  <a href="/docs">docs</a>
+              </li>
+              <li>
+                  <a href="/support">support</a>
+              </li>
+              <li>
+                  <a href="/submit">submit</a>
+              </li>
+          </ul>
+      </div>
+    </div>
+</div>
+
+        <div class="container">
+    <div class="row-fluid">
+        <div class="span12">
+            <div class="marketing-column">
+                <div class="module">
+                    <h2>Gadget development workflow</h2>
+                    <h3>Summary</h3>
+
+<p>To ensure gadget code quality all gadget code created internally or by contractors should go through code review by a Versal engineer. We practice something similar to 
+<a href="http://scottchacon.com/2011/08/31/github-flow.html">github flow</a> creating branches off of master and creating pull requests back to master.</p>
+
+<h3>Starting a project</h3>
+
+<p>A Versal engineer will create a repo for you. If you&#39;re starting with a pre-existing codebase or have already developed part of the gadget before this happens create an empty master branch and create a pull request on Github for someone to review your initial work. The steps for doing this are listed in the next section.</p>
+
+<h3>Workflow steps</h3>
+
+<p>In a nutshell the flow works like this (<a href="http://scottchacon.com/2011/08/31/github-flow.html">adapted from github-flow</a>):</p>
+
+<ul>
+<li>the <code>master</code> branch is always tested, reviewed and production ready code</li>
+<li>to work on something new, create a descriptively named branch off of master (e.g. feature/shuffle-deck or bugfix/timing)</li>
+<li>commit to that branch locally and regularly push your work to the same named branch on the server</li>
+<li>when you need feedback or help, or you think the branch is ready for merging, open a pull request and assign a Versal engineer</li>
+<li>after they have reviewed the code and tested the feature they will merge it into master and published</li>
+</ul>
+
+<h3>Guidelines</h3>
+
+<h4>Style</h4>
+
+<p>See <a href="https://github.com/styleguide">Github</a> and <a href="https://github.com/airbnb/javascript">Airbnb</a> style guides for good style.</p>
+
+<h4>Name your branch sensibly</h4>
+
+<p>New features belong in new branches. Push your changes appropriately:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">$ git checkout -b feature/my-new-feature
+$ git push origin feature/my-new-feature
+</code></pre></div>
+<p>Our unenforced convention is to prefix each branch with some indication of its content:</p>
+
+<ul>
+<li><code>feature/branch</code>: a new feature</li>
+<li><code>fix/branch</code>: a fix for an outstanding (but non-critical) issue</li>
+<li><code>hotfix/branch</code>: an urgent fix for a prod issue</li>
+</ul>
+
+<h4>Don&#39;t force push</h4>
+
+<p>Generally don&#39;t use git&#39;s force push feature. Force pushing to a feature branch while you work on it is actually OK but should be done sparingly and with great care. Either know how <a href="http://stackoverflow.com/questions/13148066/warning-push-default-is-unset-its-implicit-value-is-changing-in-git-2-0"><code>push.default</code></a> works or specify an origin and branch while pushing.</p>
+
+<h4>Create small, meaningful commits</h4>
+
+<p>Each time you make a meaningful change or add code create a commit with a descriptive commit message. Ideally the person who reviews your code can look at each commit and know the entire store of how the feature was made or the bug was fixed.</p>
+
+<h4>Squash ugly commits</h4>
+
+<p><code>git rebase -i</code> is a really great tool. Get to know it, and turn an ugly commit history into a beautiful one before submitting a PR.</p>
+
+<h4>Include an issue number</h4>
+
+<p>Your commit message or the pull request description should contain a Jira or Github issue number so the person reviewing it can find specification and/or conversations relating to the pull request. </p>
+
+<h4>Provide context</h4>
+
+<p>Provide enough context for the reviewer. Assume they don&#39;t know anything about the issue before coming across your request (they might not). If there&#39;s an issue you&#39;re fixing link to it. If the commit history itself doesn&#39;t tell the full story story well enough add a couple sentences explaining it.</p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="container-auto container-footer">
+        <div class="footer-quote"></div>
+    </div>
+    <div class="navbar navbar-footer">
+        <div class="navbar-inner">
+          <div class="navbar-inside">
+              <div class="brand">© 2014 Versal Group, Inc.</div>
+          </div>
+        </div>
+    </body>
+</html>

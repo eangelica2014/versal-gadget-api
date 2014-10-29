@@ -1,0 +1,265 @@
+<html>
+<head>
+
+<title>Make and preview changes | Versal for developers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=960">
+<meta name="keywords" content="versal, versal.com, Versal Group Inc.">
+<meta name="description" content="Versal Group, Inc.">
+<meta property="og:image" content="/assets/img/fb-og.png">
+<meta property="og:title" content="Versal">
+<meta property="og:description" content="One idea can launch a million more">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" href="/styles/0.2.148/main.min.css">
+<link rel="stylesheet" href="/styles/0.2.148/versal.site.min.css">
+<link rel="stylesheet" href="/styles/syntax.css">
+<link rel="stylesheet" href="/styles/docs.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="navbar navbar-fixed-top navbar-site">
+    <div class="navbar-inner">
+      <div class="navbar-inside">
+          <a href="/" class="brand">
+              <div class="logo-nav-svg">
+              </div>
+          </a>
+          <ul class="nav pull-right">
+              <li>
+                  <a href="/docs">docs</a>
+              </li>
+              <li>
+                  <a href="/support">support</a>
+              </li>
+              <li>
+                  <a href="/submit">submit</a>
+              </li>
+          </ul>
+      </div>
+    </div>
+</div>
+
+        <div class="container">
+    <div class="row-fluid">
+        <div class="span3">
+            <div class="homepage-activity">
+                <div class="nav-docs">
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Overview and concepts</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="/docs/introduction.html">Introduction</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/versal-platform.html">The Versal platform</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/courses-lessons-and-gadgets.html">Courses, lessons, and gadgets</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/authors-and-learners.html">Authors and learners</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/how-gadgets-work.html">How gadgets work</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Gadget tutorial</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="/docs/getting-started.html">Getting started</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/creating-new-gadget-project.html">Creating a new gadget project</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/testing-new-gadget.html">Testing the new gadget</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/preview-changes.html" class="active">Make and preview changes</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/how-this-gadget-works.html">How this gadget works</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/add-configurable-color.html">Add a configurable color</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/publish-gadget.html">Publish the gadget</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Reference</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="/docs/layout-of-gadget-project.html">The layout of a gadget project</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/gadget-lifecycle.html">The gadget lifecycle</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/deploying-gadget.html">Deploying a gadget</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/external-links.html">External links</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Example gadgets</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="https://github.com/Versal/hello-world-gadget">Hello world</a>
+            
+          </li>
+        
+          <li>
+            <a href="https://github.com/Versal/highlightr-iframe">Highlightr</a>
+            
+          </li>
+        
+          <li>
+            <a href="https://github.com/Versal/codepen-gadget">Codepen</a>
+            
+          </li>
+        
+          <li>
+            <a href="https://github.com/Versal/chess-gadget">Chess</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+</div>
+
+            </div>
+        </div>
+        <div class="span9">
+            <div class="marketing-column">
+                <div class="module">
+                    <h2>Make and preview changes</h2>
+                    <p>While the preview is running, let us examine the gadget code in <code>versal.html</code>. It is self-contained and consists of a simple CSS style sheet and a small JavaScript snippet:</p>
+<div class="highlight"><pre><code class="language-javascript" data-lang="javascript"><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span>
+<span class="kd">var</span> <span class="nx">greeting</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;[name=greeting]&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">learnerName</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;[name=learnerName]&#39;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">player</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VersalPlayerAPI</span><span class="p">();</span>
+
+<span class="nx">greeting</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;change&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+  <span class="nx">player</span><span class="p">.</span><span class="nx">setAttribute</span><span class="p">(</span><span class="nx">greeting</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">greeting</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">learnerName</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;change&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">e</span><span class="p">){</span>
+  <span class="nx">player</span><span class="p">.</span><span class="nx">setLearnerAttribute</span><span class="p">(</span><span class="nx">learnerName</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span> <span class="nx">learnerName</span><span class="p">.</span><span class="nx">value</span><span class="p">);</span>
+<span class="p">});</span>
+
+<span class="nx">player</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;attributesChanged&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">greeting</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">greeting</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">greeting</span><span class="p">;</span>
+  <span class="p">};</span>
+<span class="p">});</span>
+
+<span class="nx">player</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;learnerStateChanged&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">data</span><span class="p">){</span>
+  <span class="k">if</span><span class="p">(</span><span class="nx">data</span><span class="p">.</span><span class="nx">learnerName</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">learnerName</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">learnerName</span><span class="p">;</span>
+  <span class="p">};</span>
+<span class="p">});</span>
+
+<span class="nx">player</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;editableChanged&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">editable</span><span class="p">){</span>
+  <span class="nx">greeting</span><span class="p">.</span><span class="nx">readOnly</span> <span class="o">=</span> <span class="o">!</span><span class="nx">editable</span><span class="p">.</span><span class="nx">editable</span><span class="p">;</span>
+  <span class="nx">learnerName</span><span class="p">.</span><span class="nx">readOnly</span> <span class="o">=</span> <span class="nx">editable</span><span class="p">.</span><span class="nx">editable</span><span class="p">;</span>
+<span class="p">});</span>
+
+<span class="nx">player</span><span class="p">.</span><span class="nx">setHeight</span><span class="p">(</span><span class="mi">60</span><span class="p">);</span>
+<span class="nx">player</span><span class="p">.</span><span class="nx">startListening</span><span class="p">();</span>
+<span class="o">&lt;</span><span class="err">/script&gt;</span>
+</code></pre></div>
+<p>Let&#39;s set a background color on the gadget. Add these lines to the <code>&lt;style&gt;</code> tag in <code>versal.html</code>:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">  body {
+    background-color: #def;
+  }
+</code></pre></div>
+<p>Now reload the browser window where you opened the preview. You will see the changed gadget:</p>
+
+<p><img src="images/my-gadget-2.png" alt="lesson with changed gadget" title="Lesson with changed gadget"></p>
+
+<p>In this way, you can preview your new gadget code as you are developing it.</p>
+
+                    <div class="docs-prevnext">
+                      
+                        <a class="docs-prev" href="/docs/testing-new-gadget.html">&larr;Testing the new gadget</a>
+                      
+                      
+                        <a class="docs-next pull-right" href="/docs/how-this-gadget-works.html">How this gadget works &rarr;</a>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="container-auto container-footer">
+        <div class="footer-quote"></div>
+    </div>
+    <div class="navbar navbar-footer">
+        <div class="navbar-inner">
+          <div class="navbar-inside">
+              <div class="brand">© 2014 Versal Group, Inc.</div>
+          </div>
+        </div>
+    </body>
+</html>

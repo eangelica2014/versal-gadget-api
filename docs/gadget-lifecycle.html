@@ -1,0 +1,406 @@
+<html>
+<head>
+
+<title>The gadget lifecycle | Versal for developers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=960">
+<meta name="keywords" content="versal, versal.com, Versal Group Inc.">
+<meta name="description" content="Versal Group, Inc.">
+<meta property="og:image" content="/assets/img/fb-og.png">
+<meta property="og:title" content="Versal">
+<meta property="og:description" content="One idea can launch a million more">
+<link rel="shortcut icon" href="/favicon.ico">
+<link rel="stylesheet" href="/styles/0.2.148/main.min.css">
+<link rel="stylesheet" href="/styles/0.2.148/versal.site.min.css">
+<link rel="stylesheet" href="/styles/syntax.css">
+<link rel="stylesheet" href="/styles/docs.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="navbar navbar-fixed-top navbar-site">
+    <div class="navbar-inner">
+      <div class="navbar-inside">
+          <a href="/" class="brand">
+              <div class="logo-nav-svg">
+              </div>
+          </a>
+          <ul class="nav pull-right">
+              <li>
+                  <a href="/docs">docs</a>
+              </li>
+              <li>
+                  <a href="/support">support</a>
+              </li>
+              <li>
+                  <a href="/submit">submit</a>
+              </li>
+          </ul>
+      </div>
+    </div>
+</div>
+
+        <div class="container">
+    <div class="row-fluid">
+        <div class="span3">
+            <div class="homepage-activity">
+                <div class="nav-docs">
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Overview and concepts</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="/docs/introduction.html">Introduction</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/versal-platform.html">The Versal platform</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/courses-lessons-and-gadgets.html">Courses, lessons, and gadgets</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/authors-and-learners.html">Authors and learners</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/how-gadgets-work.html">How gadgets work</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Gadget tutorial</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="/docs/getting-started.html">Getting started</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/creating-new-gadget-project.html">Creating a new gadget project</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/testing-new-gadget.html">Testing the new gadget</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/preview-changes.html">Make and preview changes</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/how-this-gadget-works.html">How this gadget works</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/add-configurable-color.html">Add a configurable color</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/publish-gadget.html">Publish the gadget</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Reference</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="/docs/layout-of-gadget-project.html">The layout of a gadget project</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/gadget-lifecycle.html" class="active">The gadget lifecycle</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/deploying-gadget.html">Deploying a gadget</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/external-links.html">External links</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Example gadgets</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="https://github.com/Versal/hello-world-gadget">Hello world</a>
+            
+          </li>
+        
+          <li>
+            <a href="https://github.com/Versal/highlightr-iframe">Highlightr</a>
+            
+          </li>
+        
+          <li>
+            <a href="https://github.com/Versal/codepen-gadget">Codepen</a>
+            
+          </li>
+        
+          <li>
+            <a href="https://github.com/Versal/chess-gadget">Chess</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+</div>
+
+            </div>
+        </div>
+        <div class="span9">
+            <div class="marketing-column">
+                <div class="module">
+                    <h2>The gadget lifecycle</h2>
+                    <h3>Gadget/player messaging</h3>
+
+<p>The player communicates with the gadget through a <code>postMessage</code>-based message bus. The recommended way is to use the <code>player-api</code> module, which hides the low-level details of <code>postMessage</code> communication. If you wish you may consult the detailed documentation about the <a href="https://github.com/Versal/versal-gadget-launchers/blob/master/iframe-launcher/README.md">gadget messaging API</a>. However, the <a href="https://github.com/Versal/versal-gadget-api/blob/master/README.md#versal-player-apijs">player-api module</a> is more convenient and sufficient for all purposes.</p>
+
+<h3>Installation of <code>player-api</code></h3>
+
+<p>This module is part of the Versal gadget API. Include this as a Bower dependency:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">bower install --save versal-gadget-api
+</code></pre></div>
+<p>If you are using Web components, include the <code>player-api</code> into your main HTML document like this:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;link rel=&quot;import&quot; href=&quot;bower_components/versal-gadget-api/versal-gadget-api.html&quot;&gt;
+</code></pre></div>
+<p>The recommended way of using Web components is to include this polyfill,</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">bower install --save versal-component-runtime
+</code></pre></div>
+<p>If you are not using Web components, include these files:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">&lt;script src=&quot;bower_components/eventEmitter/EventEmitter.js&quot;&gt;&lt;/script&gt;
+&lt;script src=&quot;bower_components/versal-gadget-api/versal-player-api.js&quot;&gt;&lt;/script&gt;
+</code></pre></div>
+<h3>Sending and receiving messages</h3>
+
+<p>When your gadget code is loaded, create a new <code>player-api</code> object:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var playerApi = new VersalPlayerAPI();
+</code></pre></div>
+<p>To receive messages from the player, add a listener to the player object, for example like this:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">playerApi.on(&#39;attributesChanged&#39;, function(attrs){
+  // do something
+});
+</code></pre></div>
+<p>To send messages to the player, call a method on the <code>player-api</code> object, for example:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">// send this command to receive initial events
+playerApi.startListening();
+</code></pre></div>
+<p>The supported messages and their JSON formats are documented in the repository <a href="https://github.com/Versal/versal-gadget-api/blob/master/README.md#versal-player-apijs">Versal/versal-gadget-api</a>. Here we will describe how gadgets use these messages to communicate with the player.</p>
+
+<h3>Gadget configuration</h3>
+
+<p>When the gadget code is first loaded, the gadget is not yet attached to a DOM node in the lesson document. At this point, the gadget should initialize itself, so that it is ready to receive its current configuration data. Then the gadget should send the player a <code>startListening</code> message. The player will respond by sending messages that give the gadget its configuration data.</p>
+
+<p>Keep in mind that the Versal platform expects the same gadget code to implement the learner&#39;s UX and the additional editing UX.
+To aid this separation of concerns, the gadget configuration data has two main parts: the gadget&#39;s <strong>attributes</strong> and the gadget&#39;s <strong>learner state</strong>.</p>
+
+<p>The attributes are parameters of the gadget instance that are configured by the course author, globally for all learners. The learner state describes the result of each particular learner&#39;s last interaction with the gadget.</p>
+
+<p>For example, the attributes of a quiz gadget may describe the quiz title, the text of each question, and the correct answers. The learner state of a quiz gadget may describe the answers last selected by the learner when submitting the quiz for evaluation.</p>
+
+<p>As another example, consider the standard Versal image gadget. The attributes of the image gadget describe the image caption text and the asset information for the uploaded image. The learner state is empty, since the image gadget is not interactive.</p>
+
+<p>Each gadget instance’s learner state is associated with the particular signed-in Versal user (who may or may not have authoring rights to the gadget).
+When editing the gadget, the author changes the gadget&#39;s attributes, while the learner state can only be changed by a learner. That learner may happen to be the same person as the course author, since all authors are learners by virtue of being authenticated Versal users. But other learners cannot change the gadget&#39;s attributes.</p>
+
+<p>How does the gadget receive its configuration data? After the gadget sends the message <code>startListening</code> to the player, the player will post a series of <code>attributesChanged</code> and/or <code>learnerStateChanged</code> messages to the gadget. These messages carry the attributes and the learner state for the gadget.</p>
+
+<p>The configuration data always consists of a set of attributes - each attribute being a key-value pair. As an example, the attributes for the &quot;French word gallery&quot; gadget might contain an array, such as</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">{ words:
+  [
+     { imageId : &quot;a7c3fb&quot;, word : &quot;soupçon&quot; },
+     { imageId : &quot;4cb834&quot;, word : &quot;parapluie&quot; },
+     { imageId : &quot;7ad20c&quot;, word : &quot;gants&quot; }
+  ]
+}
+</code></pre></div>
+<p>while the learner state may be just a single attribute, say <code>{index: 1}</code>, storing the index of the word last viewed by the learner. As a developer, you are free to organize your data structures as you see fit.</p>
+
+<p>The gadget may also receive an <code>editableChanged</code> message that indicates whether an author has started editing the gadget.</p>
+
+<p>The gadget code must always react to these messages by adjusting its UI and/or by storing the state internally. For example, the <code>editableChanged</code> message can come at any time (as the author toggles editing on and off). The same holds for <code>attributesChanged</code> and <code>learnerStateChanged</code>.</p>
+
+<h3>Initial visual state</h3>
+
+<p>At the initialization stage, the gadget may also post the messages <code>setEmpty</code>, <code>setHeight</code>, <code>watchBodyHeight</code>, and <code>setPropertySheetAttributes</code> to the player API. These messages will configure some visual aspects of the gadget that are provided by the Versal platform.</p>
+
+<p>The <code>setEmpty</code> message is relevant when editing; it tells the player to display a gadget placeholder indicating that the gadget is empty and cannot yet show any useful content. The author will see right away that the gadget still needs to be configured. For instance, an image still needs to be uploaded, or other content needs to be configured, before the gadget can show anything. Here is how an empty gadget looks:</p>
+
+<p><img src="images/empty_gadget.png" alt="empty gadget" title="Empty gadget"></p>
+
+<p>The <code>setHeight</code> message specifies the desired pixel height of the gadget&#39;s iframe. The width of the iframe is fixed, equal to the total width of the lesson window. (In the Web browser, this is 724 px, but it can be different on other platforms).</p>
+
+<p>The <code>watchBodyHeight</code> message specifies that the gadget&#39;s iframe should dynamically track the actual height of the content of the gadget&#39;s <code>body</code> element.</p>
+
+<p>The <code>setPropertySheetAttributes</code> message will declare the types and the names of the attributes displayed in the gadget&#39;s <strong>property sheet</strong>. This is a simple UI provided by the Versal player, which allows the author to configure some parameters of the gadget. (See below for more details.)</p>
+
+<h3>Persisting the attributes and the learner state</h3>
+
+<p>The Versal platform will persist the gadget&#39;s attributes and learner state if the gadget sends the messages <code>setAttributes</code> and <code>setLearnerState</code> to the player.</p>
+
+<p>In principle, a gadget can create its own author&#39;s UI for editing the attributes. It is convenient to use <strong>property sheets</strong> for simple attributes such as text, numbers, or checkboxes. The property sheet is implemented by the Versal player and is toggled through the &quot;cogwheel&quot; icon in the Versal player.</p>
+
+<p>The Versal player will automatically persist all attributes defined on the property sheet. When the author changes any values in the property sheet, the gadget will receive an <code>attributesChanged</code> message and can react to it normally.</p>
+
+<h3>Property sheets</h3>
+
+<p>Property sheets automatically specify titles for the data attributes. The <code>setPropertySheetAttributes</code> message specifies all titles and types of the attributes. Presently the player supports the following data types in property sheets:</p>
+
+<ul>
+<li><code>Text</code>, <code>Number</code>, <code>TextArea</code>, <code>Checkbox</code>, <code>Color</code>: these types need no options.</li>
+</ul>
+
+<p>Example: <code>{ type: &#39;TextArea&#39; }</code></p>
+
+<ul>
+<li>  <code>Checkboxes</code>, <code>Radio</code>, <code>Select</code>: these types take an array of <code>options</code>, representing the possible selection items. The <code>Select</code> type is a drop-down listbox.</li>
+</ul>
+
+<p>Example: <code>{ type: &#39;Radio&#39;, options : [&#39;Green&#39;, &#39;Yellow&#39;, &#39;Red&#39; ] }</code></p>
+
+<ul>
+<li>     <code>Date</code>, a date picker</li>
+</ul>
+
+<p>Example: <code>{ type: &#39;Date&#39;, yearStart: 1990, yearEnd : 2038 }</code></p>
+
+<ul>
+<li>     <code>DateTime</code>, a date/time picker</li>
+</ul>
+
+<p>Example: <code>{ type: &#39;Datetime&#39;, &#39;yearStart : 1990, yearEnd : 2038, minsInterval : 60 }</code></p>
+
+<ul>
+<li>     <code>Range</code>, a slider with a given range and step</li>
+</ul>
+
+<p>Example: <code>{ type: &#39;Range&#39;, min: 100, max: 200, step: 10 }</code></p>
+
+<ul>
+<li>     <code>Tags</code>, a selection of user-supplied tags</li>
+</ul>
+
+<p>Example:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">{ type : &#39;Tags&#39;,
+  options: [&#39;music&#39;, &#39;movies&#39;, &#39;study&#39;, &#39;family&#39;, &#39;pets&#39;],
+  lowercase: true,
+  duplicates: false,
+  minLength: 3,
+  maxLength: 20,
+  updateAutoComplete: true
+}
+</code></pre></div>
+<p>Here is an example property sheet, showing a slider for a numerical value (&quot;number of words&quot;) and a drop-down selection box (&quot;chosen author&quot;):</p>
+
+<p><img src="images/property_sheet_1.png" alt="property sheet" title="Property sheet"></p>
+
+<p>The property sheet in this screenshot was configured by the following message:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">playerApi.setPropertySheetAttributes({
+     numberOfWords:  { type: &#39;Range&#39;, min: 100, max: 500, step: 20 },
+     chosenAuthor: { type: &#39;Select&#39;,
+                      options: [&#39;Shakespeare&#39;, &#39;Hegel&#39;, &#39;Dickens&#39;, &#39;Lao Tzu&#39;]
+                   }
+})
+</code></pre></div>
+<p>If the property sheets are not powerful enough for configuring your gadget, you can implement your own custom UI for the gadget editing. Your gadget should call <code>setAttributes</code> whenever you need to persist some changed attributes.</p>
+
+<p>There is no property sheet option for the learner state. Call <code>setLearnerState</code> to persist any changes.</p>
+
+<h3>Assets</h3>
+
+<p>If your gadget displays images, the author must somehow provide these images when creating the lesson. The Versal platform allows the author to upload images and videos directly through the <strong>asset</strong> API.</p>
+
+<p>The gadget asks the user to upload a new asset like this:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">playerApi.requestAsset({
+    attribute: &#39;myImage&#39;,
+    type: &#39;image&#39;
+})
+</code></pre></div>
+<p>Possible asset types are <code>image</code> and <code>video</code>. The <code>attribute</code> field specifies the name of the gadget&#39;s attribute that will hold the asset information.</p>
+
+<p>Upon a <code>requestAsset</code> message, the player displays a UI for uploading an asset (an image or a video). After a successful upload, the player will create a new asset ID string for the uploaded asset. The new asset ID will be set to the attribute with the given name. So the player will post a message <code>attributesChanged</code> to the gadget. The new value of the attribute <code>myImage</code> could be, for example, this:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">  myImage: {
+      id: &#39;a73cb21...&quot;,
+      representations: [
+        { id: &#39;65bb32...&#39;,
+          scale: &#39;800x600&#39;,
+          contentType: &#39;image/png&#39;,
+          original: false,
+          available: true
+        }, ...
+      ]
+    }
+</code></pre></div>
+<p>A Versal asset contains an array of <code>representations</code>. Each element of that array describes an image or a video, which may have been scaled down to a smaller size. One of the representations is tagged as <code>original:true</code>; this is the one that has not been scaled down.  (If you upload a small image, it will not be scaled down, and so there will be only one &quot;representation&quot;, which will be <code>original</code>.)</p>
+
+<p>All uploaded assets are automatically processed (and scaled down if necessary) by the Versal platform. The resulting representations are stored in remote URLs. To display the image, you must formulate a valid URL by rendering a provided &quot;url template&quot; with the representation&#39;s ID. The template is delivered to the gadget via the <a href="https://github.com/Versal/versal-gadget-launchers/blob/master/iframe-launcher/README.md#environmentchanged"><code>environmentChanged</code></a> message. The template will be similar to <code>//static.versal.com/restapi/assets/&lt;%= id %&gt;</code> which can be rendered by replacing the substition section at the end of the template with the desired representation Id. For example you can get full URLs like this:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">var url = playerApi.assetUrl(assetId);
+/* now set img src to this url */
+</code></pre></div>
+<p>The gadget can now use this URL to set the <code>img src=...</code> tag or to display a video player.</p>
+
+                    <div class="docs-prevnext">
+                      
+                        <a class="docs-prev" href="/docs/layout-of-gadget-project.html">&larr;The layout of a gadget project</a>
+                      
+                      
+                        <a class="docs-next pull-right" href="/docs/deploying-gadget.html">Deploying a gadget &rarr;</a>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="container-auto container-footer">
+        <div class="footer-quote"></div>
+    </div>
+    <div class="navbar navbar-footer">
+        <div class="navbar-inner">
+          <div class="navbar-inside">
+              <div class="brand">© 2014 Versal Group, Inc.</div>
+          </div>
+        </div>
+    </body>
+</html>
