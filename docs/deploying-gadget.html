@@ -1,58 +1,268 @@
-<p>After you create the HTML and JS files for your gadget, you will want to test your gadget visually and then upload it.</p>
+<html>
+<head>
 
-<h3 id="the-deployment-cycle">The deployment cycle</h3>
+<title>Deploying a gadget | Versal for developers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=960">
+<meta name="keywords" content="versal, versal.com, Versal Group Inc.">
+<meta name="description" content="Versal Group, Inc.">
+<meta property="og:title" content="Versal">
+<meta property="og:description" content="One idea can launch a million more">
+<link rel="shortcut icon" href="https://versal.github.io/versal-gadget-api/favicon.ico">
+<link rel="stylesheet" href="https://versal.github.io/versal-gadget-api/styles/0.2.148/main.min.css">
+<link rel="stylesheet" href="https://versal.github.io/versal-gadget-api/styles/0.2.148/versal.site.min.css">
+<link rel="stylesheet" href="https://versal.github.io/versal-gadget-api/styles/syntax.css">
+<link rel="stylesheet" href="https://versal.github.io/versal-gadget-api/styles/docs.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="navbar navbar-fixed-top navbar-site">
+    <div class="navbar-inner">
+      <div class="navbar-inside">
+          <a href="/" class="brand">
+              <div class="logo-nav-svg">
+              </div>
+          </a>
+          <ul class="nav pull-right">
+              <li>
+                  <a href="/docs">docs</a>
+              </li>
+              <li>
+                  <a href="/support">support</a>
+              </li>
+              <li>
+                  <a href="/submit">submit</a>
+              </li>
+          </ul>
+      </div>
+    </div>
+</div>
+
+        <div class="container">
+    <div class="row-fluid">
+        <div class="span3">
+            <div class="homepage-activity">
+                <div class="nav-docs">
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Overview and concepts</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="/docs/introduction.html">Introduction</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/versal-platform.html">The Versal platform</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/courses-lessons-and-gadgets.html">Courses, lessons, and gadgets</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/authors-and-learners.html">Authors and learners</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/how-gadgets-work.html">How gadgets work</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Gadget tutorial</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="/docs/getting-started.html">Getting started</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/creating-new-gadget-project.html">Creating a new gadget project</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/testing-new-gadget.html">Testing the new gadget</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/preview-changes.html">Make and preview changes</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/how-this-gadget-works.html">How this gadget works</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/add-configurable-color.html">Add a configurable color</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/publish-gadget.html">Publish the gadget</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Reference</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="/docs/layout-of-gadget-project.html">The layout of a gadget project</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/gadget-lifecycle.html">The gadget lifecycle</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/deploying-gadget.html" class="active">Deploying a gadget</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/external-links.html">External links</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Example gadgets</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="https://github.com/Versal/hello-world-gadget">Hello world</a>
+            
+          </li>
+        
+          <li>
+            <a href="https://github.com/Versal/highlightr-iframe">Highlightr</a>
+            
+          </li>
+        
+          <li>
+            <a href="https://github.com/Versal/codepen-gadget">Codepen</a>
+            
+          </li>
+        
+          <li>
+            <a href="https://github.com/Versal/chess-gadget">Chess</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+</div>
+
+            </div>
+        </div>
+        <div class="span9">
+            <div class="marketing-column">
+                <div class="module">
+                    <h2>Deploying a gadget</h2>
+                    <p>After you create the HTML and JS files for your gadget, you will want to test your gadget visually and then upload it.</p>
+
+<h3>The deployment cycle</h3>
 
 <ul>
-  <li>Test the gadget locally on your development machine</li>
-  <li>Deploy the gadget in a “sandbox” on Versal.com</li>
-  <li>Create a course that uses your gadget</li>
-  <li>Develop, test, and deploy an updated version of the gadget</li>
-  <li>Update the gadget in the course(s) using it</li>
+<li>Test the gadget locally on your development machine</li>
+<li>Deploy the gadget in a &quot;sandbox&quot; on Versal.com</li>
+<li>Create a course that uses your gadget</li>
+<li>Develop, test, and deploy an updated version of the gadget</li>
+<li>Update the gadget in the course(s) using it</li>
 </ul>
 
-<h3 id="testing-locally">Testing locally</h3>
+<h3>Testing locally</h3>
 
 <p>Go to the gadget directory (where <code>versal.json</code> is located) and run the command</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">versal preview
+</code></pre></div>
+<p>This command starts a local HTTP server on port 3000. Open the URL <a href="http://localhost:3000">localhost:3000</a> in a browser. You will see an empty lesson page and your gadget&#39;s icon in the bottom tray. Double-click on the gadget icon to insert the gadget into the lesson. This is how a course author will start using your gadget in a new course. You can now interact with your gadget, both as a course author and as a learner. (Click the &quot;cogwheel&quot; icon to toggle gadget editing.)</p>
 
-<p><code>
-versal preview
-</code></p>
+<p>Pro tip: While this local HTTP server is running, you can continue changing the gadget&#39;s code. Just refresh the browser to see the changes live! (Except if you change <code>versal.json</code> then you need to restart <code>versal preview</code> to see the changes.)</p>
 
-<p>This command starts a local HTTP server on port 3000. Open the URL <a href="http://localhost:3000">localhost:3000</a> in a browser. You will see an empty lesson page and your gadget’s icon in the bottom tray. Double-click on the gadget icon to insert the gadget into the lesson. This is how a course author will start using your gadget in a new course. You can now interact with your gadget, both as a course author and as a learner. (Click the “cogwheel” icon to toggle gadget editing.)</p>
+<h3>Deploying in sandbox</h3>
 
-<p>Pro tip: While this local HTTP server is running, you can continue changing the gadget’s code. Just refresh the browser to see the changes live! (Except if you change <code>versal.json</code> then you need to restart <code>versal preview</code> to see the changes.)</p>
-
-<h3 id="deploying-in-sandbox">Deploying in sandbox</h3>
-
-<p>If you haven’t yet deployed your gadget, make sure that you sign in to Versal:</p>
-
-<p><code>
-versal signin
-</code></p>
-
+<p>If you haven&#39;t yet deployed your gadget, make sure that you sign in to Versal:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">versal signin
+</code></pre></div>
 <p>Go to the gadget directory and run the command</p>
-
-<p><code>
-versal upload
-</code></p>
-
-<p>The gadget will be uploaded to the Versal platform. However, this gadget is uploaded in a “sandbox”. It is not yet approved for the entire world to see, and will be visible only in courses authored by yourself.</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">versal upload
+</code></pre></div>
+<p>The gadget will be uploaded to the Versal platform. However, this gadget is uploaded in a &quot;sandbox&quot;. It is not yet approved for the entire world to see, and will be visible only in courses authored by yourself.</p>
 
 <p>**WARNING: There are size restrictions in place when uploading gadgets. To exclude development resources and other extraneous files add their paths to a file in the root of your gadget project called <code>.versalignore</code> (works like <code>.gitignore</code>).</p>
 
-<h3 id="inserting-a-gadget-into-a-course">Inserting a gadget into a course</h3>
+<h3>Inserting a gadget into a course</h3>
 
-<p>Go to <a href="http://versal.com">versal.com</a>. You will need to authenticate; ask us for details. Sign in to <code>versal.com</code> and create a new course. After you start editing the new course, click on the “Sandbox” tray in the bottom; you should see your new gadget available. Drag your gadget into the lesson to start using it.</p>
+<p>Go to <a href="http://versal.com">versal.com</a>. You will need to authenticate; ask us for details. Sign in to <code>versal.com</code> and create a new course. After you start editing the new course, click on the &quot;Sandbox&quot; tray in the bottom; you should see your new gadget available. Drag your gadget into the lesson to start using it.</p>
 
-<h3 id="updating-a-published-gadget">Updating a published gadget</h3>
+<h3>Updating a published gadget</h3>
 
 <p>To update a published gadget, you need to do two things:</p>
 
 <ol>
-  <li>Change the gadget version upwards (e.g. from <code>0.1.3</code> to <code>0.1.4</code>) in <code>versal.json</code></li>
-  <li>Upload the gadget again (<code>versal upload</code>) and request approval</li>
+<li>Change the gadget version upwards (e.g. from <code>0.1.3</code> to <code>0.1.4</code>) in <code>versal.json</code></li>
+<li>Upload the gadget again (<code>versal upload</code>) and request approval</li>
 </ol>
 
 <p>Suppose you already created some courses that use your gadget version <code>0.1.3</code>, and now you published an updated version <code>0.1.4</code>. When you do this, the courses do not automatically start using the updated version. To avoid breaking the existing courses, all older gadget versions will be preserved by the platform. The course authors need to agree explicitly to upgrade your gadget to a new version.</p>
 
-<p>Go to the course you created where your gadget has been used. Click on the “Sandbox” tray and you will see that your gadget’s icon has a band on it, indicating that an upgrade is available. Click on the band and confirm the upgrade to a new version.</p>
+<p>Go to the course you created where your gadget has been used. Click on the &quot;Sandbox&quot; tray and you will see that your gadget&#39;s icon has a band on it, indicating that an upgrade is available. Click on the band and confirm the upgrade to a new version.</p>
+
+                    <div class="docs-prevnext">
+                      
+                        <a class="docs-prev" href="https://versal.github.io/versal-gadget-api/docs/gadget-lifecycle.html">&larr;The gadget lifecycle</a>
+                      
+                      
+                        <a class="docs-next pull-right" href="https://versal.github.io/versal-gadget-api/docs/external-links.html">External links &rarr;</a>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="container-auto container-footer">
+        <div class="footer-quote"></div>
+    </div>
+    <div class="navbar navbar-footer">
+        <div class="navbar-inner">
+          <div class="navbar-inside">
+              <div class="brand">© 2014 Versal Group, Inc.</div>
+          </div>
+        </div>
+    </body>
+</html>

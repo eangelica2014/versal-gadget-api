@@ -1,7 +1,226 @@
-<p>An <strong>author</strong> creates content in a course: drags gadgets into the lesson, then enters text, uploads images, selects questions for a quiz, etc. From the viewpoint of the gadget developer, the author <em>configures</em> each of the gadgets in a lesson. The configuration for each gadget instance is stored in the <strong>attributes</strong> of that instance.</p>
+<html>
+<head>
+
+<title>Authors and learners | Versal for developers</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=960">
+<meta name="keywords" content="versal, versal.com, Versal Group Inc.">
+<meta name="description" content="Versal Group, Inc.">
+<meta property="og:title" content="Versal">
+<meta property="og:description" content="One idea can launch a million more">
+<link rel="shortcut icon" href="https://versal.github.io/versal-gadget-api/favicon.ico">
+<link rel="stylesheet" href="https://versal.github.io/versal-gadget-api/styles/0.2.148/main.min.css">
+<link rel="stylesheet" href="https://versal.github.io/versal-gadget-api/styles/0.2.148/versal.site.min.css">
+<link rel="stylesheet" href="https://versal.github.io/versal-gadget-api/styles/syntax.css">
+<link rel="stylesheet" href="https://versal.github.io/versal-gadget-api/styles/docs.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="navbar navbar-fixed-top navbar-site">
+    <div class="navbar-inner">
+      <div class="navbar-inside">
+          <a href="/" class="brand">
+              <div class="logo-nav-svg">
+              </div>
+          </a>
+          <ul class="nav pull-right">
+              <li>
+                  <a href="/docs">docs</a>
+              </li>
+              <li>
+                  <a href="/support">support</a>
+              </li>
+              <li>
+                  <a href="/submit">submit</a>
+              </li>
+          </ul>
+      </div>
+    </div>
+</div>
+
+        <div class="container">
+    <div class="row-fluid">
+        <div class="span3">
+            <div class="homepage-activity">
+                <div class="nav-docs">
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Overview and concepts</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="/docs/introduction.html">Introduction</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/versal-platform.html">The Versal platform</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/courses-lessons-and-gadgets.html">Courses, lessons, and gadgets</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/authors-and-learners.html" class="active">Authors and learners</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/how-gadgets-work.html">How gadgets work</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Gadget tutorial</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="/docs/getting-started.html">Getting started</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/creating-new-gadget-project.html">Creating a new gadget project</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/testing-new-gadget.html">Testing the new gadget</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/preview-changes.html">Make and preview changes</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/how-this-gadget-works.html">How this gadget works</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/add-configurable-color.html">Add a configurable color</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/publish-gadget.html">Publish the gadget</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Reference</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="/docs/layout-of-gadget-project.html">The layout of a gadget project</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/gadget-lifecycle.html">The gadget lifecycle</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/deploying-gadget.html">Deploying a gadget</a>
+            
+          </li>
+        
+          <li>
+            <a href="/docs/external-links.html">External links</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+    <div class="nav-docs-section">
+      <div class="clearfix">
+        <h4>Example gadgets</h4>
+      </div>
+      <ul class="column-list">
+        
+          <li>
+            <a href="https://github.com/Versal/hello-world-gadget">Hello world</a>
+            
+          </li>
+        
+          <li>
+            <a href="https://github.com/Versal/highlightr-iframe">Highlightr</a>
+            
+          </li>
+        
+          <li>
+            <a href="https://github.com/Versal/codepen-gadget">Codepen</a>
+            
+          </li>
+        
+          <li>
+            <a href="https://github.com/Versal/chess-gadget">Chess</a>
+            
+          </li>
+        
+      </ul>
+    </div>
+  
+</div>
+
+            </div>
+        </div>
+        <div class="span9">
+            <div class="marketing-column">
+                <div class="module">
+                    <h2>Authors and learners</h2>
+                    <p>An <strong>author</strong> creates content in a course: drags gadgets into the lesson, then enters text, uploads images, selects questions for a quiz, etc. From the viewpoint of the gadget developer, the author <em>configures</em> each of the gadgets in a lesson. The configuration for each gadget instance is stored in the <strong>attributes</strong> of that instance.</p>
 
 <p>Each lesson may contain several <strong>instances</strong> of the same kind of gadget (for example, several image gadgets). Of course, each gadget instance has its own configuration and is independent of other gadget instances.</p>
 
-<p>A <strong>learner</strong> can view the course content and interact with it, but cannot change the attributes configured by the author. Some gadgets may need to save the results of the learner’s interaction with the gadget’s UI (for example, save the last selected item). The Versal platform saves this information as the <strong>learner’s state</strong>, which is separate for each learner and each gadget instance.</p>
+<p>A <strong>learner</strong> can view the course content and interact with it, but cannot change the attributes configured by the author. Some gadgets may need to save the results of the learner&#39;s interaction with the gadget&#39;s UI (for example, save the last selected item). The Versal platform saves this information as the <strong>learner&#39;s state</strong>, which is separate for each learner and each gadget instance.</p>
 
-<p>Typically, an author will first create an empty gadget in a lesson, edit the gadget’s configuration, and then check the learner’s view of the gadget. So each gadget should provide a consistent user experience both for authors and for learners.</p>
+<p>Typically, an author will first create an empty gadget in a lesson, edit the gadget&#39;s configuration, and then check the learner&#39;s view of the gadget. So each gadget should provide a consistent user experience both for authors and for learners.</p>
+
+                    <div class="docs-prevnext">
+                      
+                        <a class="docs-prev" href="https://versal.github.io/versal-gadget-api/docs/courses-lessons-and-gadgets.html">&larr;Courses, lessons, and gadgets</a>
+                      
+                      
+                        <a class="docs-next pull-right" href="https://versal.github.io/versal-gadget-api/docs/how-gadgets-work.html">How gadgets work &rarr;</a>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    </div>
+    <div class="container-auto container-footer">
+        <div class="footer-quote"></div>
+    </div>
+    <div class="navbar navbar-footer">
+        <div class="navbar-inner">
+          <div class="navbar-inside">
+              <div class="brand">© 2014 Versal Group, Inc.</div>
+          </div>
+        </div>
+    </body>
+</html>
