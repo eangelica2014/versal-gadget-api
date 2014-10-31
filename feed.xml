@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Versal for developers</title>
-    <description>Resources for Versal gadget developers</description>
-    <link>http://versal.github.com/versal-gadget-api/</link>
-    <atom:link href="http://versal.github.com/versal-gadget-api/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 29 Oct 2014 03:59:48 +0000</pubDate>
-    <lastBuildDate>Wed, 29 Oct 2014 03:59:48 +0000</lastBuildDate>
+    <title></title>
+    <description></description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 31 Oct 2014 07:32:53 +0000</pubDate>
+    <lastBuildDate>Fri, 31 Oct 2014 07:32:53 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
   </channel>
