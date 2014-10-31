@@ -3,10 +3,10 @@
   <channel>
     <title>Versal for developers</title>
     <description>Resources for Versal gadget developers</description>
-    <link>https://versal.github.io/versal-gadget-api/</link>
-    <atom:link href="https://versal.github.io/versal-gadget-api/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 31 Oct 2014 19:57:04 +0000</pubDate>
-    <lastBuildDate>Fri, 31 Oct 2014 19:57:04 +0000</lastBuildDate>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 31 Oct 2014 20:03:50 +0000</pubDate>
+    <lastBuildDate>Fri, 31 Oct 2014 20:03:50 +0000</lastBuildDate>
     <generator>Jekyll v2.4.0</generator>
     
   </channel>
