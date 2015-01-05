@@ -1,0 +1,22 @@
+label {
+  font-size: 14px;
+}
+
+input {
+  border: 1px solid var(--gray-light);
+  padding: 3px;
+}
+
+input:hover {
+  border: 1px solid var(--gray);
+}
+
+input:focus {
+  border: 1px solid #3a968a;
+  outline: none;
+}
+
+input[readonly] {
+  font-size: 12px;
+  font-family: monospace;
+}
