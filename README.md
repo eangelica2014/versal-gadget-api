@@ -12,12 +12,12 @@ This repository is a collection of everything needed to create a Versal gadget. 
 
 To install all the APIs at once, you can use the new [HTML Imports API](http://www.polymer-project.org/platform/html-imports.html). We recommend using our [Web Components runtime](https://github.com/Versal/component-runtime) library as a lightweight polyfill for some Web Components libraries.
 
-In your gadget directory, run `bower install --save versal-gadget-api versal-component-runtime`.
+In your gadget directory, run `bower install --save versal-gadget-api`.
 
 Then add the following to the `<head>` of your your gadget's `versal.html`:
 
 ```
-  <script src="bower_components/versal-component-runtime/dist/runtime.min.js"></script>
+  <script src="bower_components/webcomponentsjs/webcomponentsjs-lite.min.js"></script>
   <link rel="import" href="bower_components/versal-gadget-api/versal-gadget-api.html">
 ```
 
