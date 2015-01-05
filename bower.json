@@ -22,8 +22,7 @@
   ],
   "dependencies": {
     "eventEmitter": "~4.2.7",
-    "underscore": "~1.6.0",
-    "normalize-css": "~3.0.1"
+    "underscore": "~1.6.0"
   },
   "devDependencies": {
     "versal-component-runtime": "~0.2.1"
