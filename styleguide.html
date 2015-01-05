@@ -1,37 +1,45 @@
 <!DOCTYPE html>
 <html>
-  <link rel="stylesheet" href="../normalize-css/normalize.css">
-  <link rel="stylesheet" href="versal-gadget-theme.css">
+<head>
+<link rel="stylesheet" href="versal-gadget-theme.css">
+<style>
+  body {
+    max-width: 730px;
+    margin: 0 auto;
+  }
+</style>
+</head>
+<body>
+  <h2>level 2 header</h2>
+  <h3>level 3 header</h3>
+  <h4>level 4 header</h4>
+  <div>Arbitrary text block with <a href="#">primary link</a> and <a class="secondary" href="#">secondary link</a></div>
+  <p>So that user agents can avoid retrieving resources for unsupported media types, authors may specify media-dependent @import rules. These conditional imports specify comma-separated media queries after the URI. In the absence of any media query, the import is unconditional <a href="#">primary-link</a> and <a href="#" class="secondary">secondary link</a>. Specifying all for the medium has the same effect.</p>
 
-  <style>
-    body {
-      max-width: 500px;
-      margin: 0 auto;
-    }
-  </style>
+  <ul>
+  <li>List item 1</li>
+  <li>So that user agents can avoid retrieving resources for unsupported media types, authors may specify media-dependent @import rules. These conditional imports specify comma-separated media queries after the URI.</li>
+  <li>List item 1</li>
+  </ul>
 
-  <h1>Gadget styles example usage</h1>
+  <p class="instructions">This is paragraph with instructions</p>
 
-  <p>
-    This repository defines some common styles for <a href="http://versal.com">Versal</a> gadgets. Such gadgets are typically instantiated inside an iframe, so it is the developer's responsibility to include styles that makes the gadget look consistent with other gadgets. This repo helps with that.
-  </p>
+  <ol>
+  <li>List item 1</li>
+  <li>List item 1</li>
+  <li>List item 1</li>
+  </ol>
 
-  <p>
-    This style guide is still in its infancy, we will update it along with the CSS to show how to use it.
-  </p>
+  <form>
+  <div>
+    <label>Tool name</label>
+    <input type="text" readonly value="Versal" />
+  </div>
 
-  <p>
-    Note that this style guide is probably going to be unorthodox. Gadgets are unlike regular pages on the web, they typically contain no pre-set text, except for some labels. This is because they are meant to be customized by authors of Versal courses. Therefore, you will not find regular typographic components as seen in most style guide, but mostly elements for making dynamic interfaces.
-  </p>
-
-  <h2>Elements</h2>
-
-  <p><button>Default button</button></p>
-
-  <p><input type="text" value="Text box"></p>
-
-  <p><textarea>Text area</textarea></p>
-
-  <p><select><option>Select</option></select></p>
-
+  <div>
+    <label>Search</label>
+    <input type="text" placeholder="search..." />
+  </div>
+  </form>
+</body>
 </html>
