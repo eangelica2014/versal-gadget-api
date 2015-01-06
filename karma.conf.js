@@ -3,8 +3,6 @@ module.exports = function(config) {
     frameworks: ['mocha', 'chai', 'sinon'],
     basePath: '..',
     files: [
-      'versal-component-runtime/dist/runtime.min.js',
-
       'eventEmitter/EventEmitter.js',
       'versal-gadget-api/versal-player-api.js',
       {pattern: 'versal-gadget-api/test/test_gadget.html', included: false},

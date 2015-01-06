@@ -276,7 +276,7 @@ If you are using Web components, include the `player-api` into your main HTML do
 
 The recommended way of using Web components is to include this polyfill,
 
-    bower install --save versal-component-runtime
+    bower install --save webcomponentsjs
 
 If you are not using Web components, include these files:
 
