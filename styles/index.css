@@ -4,11 +4,12 @@
 @import '../node_modules/normalize-css/normalize.css';
 @import 'typography.css';
 @import 'form.css';
+@import 'buttons.css';
 
 :root {
   --bg-gray: #f8f7f1;
   --beige: #fefdf9;
-  
+
   --white: #fff;
   --gray-light: #c7c3be;
   --gray: #7c7975;
