@@ -2,21 +2,25 @@ label {
   font-size: 14px;
 }
 
-input {
-  border: 1px solid var(--gray-light);
+input, textarea, output, select {
   padding: 3px;
 }
 
-input:hover {
+input, textarea {
+  border: 1px solid var(--gray-light);
+}
+
+input:hover, textarea:hover {
   border: 1px solid var(--gray);
 }
 
-input:focus {
+input:focus, textarea:focus {
   border: 1px solid #3a968a;
   outline: none;
 }
 
-input[readonly] {
+input[readonly], textarea[readonly], output {
   font-size: 12px;
+  line-height: 16px;
   font-family: monospace;
 }
