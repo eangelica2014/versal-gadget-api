@@ -1,5 +1,5 @@
 /* This line has to be on top */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300,600&subset=latin,cyrillic-ext);
 
 @import '../node_modules/normalize-css/normalize.css';
 @import 'typography.css';
