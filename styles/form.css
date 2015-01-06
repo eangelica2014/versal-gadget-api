@@ -2,7 +2,11 @@ label {
   font-size: 14px;
 }
 
-input, textarea, output, select {
+input, textarea, select, output {
+  color: var(--gray);
+}
+
+input, textarea, select {
   padding: 3px;
 }
 
