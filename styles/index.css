@@ -21,6 +21,11 @@
   --sans-serif: 'Open sans', sans-serif;
 }
 
+html {
+  overflow: hidden;
+  word-wrap: break-word;
+}
+
 body {
   background: var(--white);
   color: var(--gray);
